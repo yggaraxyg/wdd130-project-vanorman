@@ -63,3 +63,11 @@ main {
     border-radius: 5px;
     font-size: 1.3em;
 }
+header a {
+    text-decoration: none;
+    color: #00FF00;
+    font-size: 1.3em;
+    background-color: #92817A;
+    padding: 15px;
+    margin: 20px;
+}
