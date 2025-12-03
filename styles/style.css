@@ -5,12 +5,15 @@ body {
 }
 header {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 300px 1fr;
     align-items: center;
     background-color: #523d00;
     width: 80%;
     height: 90px;
     margin: 0 auto;
+}
+.links {
+    justify-self: right;
 }
 main {
     margin: 0 auto;
@@ -56,18 +59,22 @@ main {
     height: 100%;
     object-fit: cover;
 }
-.home-button h3{
+.home-button h3 {
     background-color: #92817A;
     width: 150px;
     margin: 0 auto;
     border-radius: 5px;
     font-size: 1.3em;
 }
+.home-button a {
+    text-decoration: none;
+    color: #00FF00;
+}
 header a {
     text-decoration: none;
     color: #00FF00;
     font-size: 1.3em;
     background-color: #92817A;
-    padding: 15px;
-    margin: 20px;
+    padding: 15px 40px;
+    margin-right: 35px;
 }
