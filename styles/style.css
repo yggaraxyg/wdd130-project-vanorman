@@ -47,6 +47,9 @@ main {
     padding-left: 25px;
     padding-bottom: 15px;
     margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    align-items: end;
 }
 .home-sub-images {
     background-color: white;
