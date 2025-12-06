@@ -49,7 +49,7 @@ main {
     margin: 0 auto;
     display: grid;
     grid-template-columns: 1fr;
-    align-items: end;
+    grid-template-rows: 1fr 90px;
 }
 .home-sub-images {
     background-color: white;
@@ -69,6 +69,9 @@ main {
     border-radius: 5px;
     font-size: 1.3em;
 }
+.home-button h3:hover {
+    background-color: #F1DABF;
+}
 .home-button a {
     text-decoration: none;
     color: #00FF00;
@@ -80,4 +83,7 @@ header a {
     background-color: #92817A;
     padding: 15px 40px;
     margin-right: 35px;
+}
+header a:hover {
+    background-color: #F1DABF;
 }
