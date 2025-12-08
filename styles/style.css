@@ -85,8 +85,7 @@ header a {
     margin-right: 35px;
 }
 
-
-/* all this junk is for the order page */
+/* order page junk */
 .orders-page * {
     margin: 0;
     padding: 0;
@@ -97,19 +96,15 @@ header a {
     font-family: 'Courier New', monospace;
     background: #F1DABF;
     min-height: 100vh;
-    padding: 20px;
 }
 
-/* Main Container */
 .main-container {
     background: #92817A;
     border: 3px solid #523D00;
     max-width: 800px;
     margin: 0 auto;
-    padding: 20px;
 }
 
-/* Header with Logo and Navigation */
 .orders-page .header {
     background: #523D00;
     padding: 10px 15px;
@@ -120,10 +115,9 @@ header a {
     gap: 20px;
 }
 
-.logo-link {
+.logo-link, .logo-img {
     display: flex;
     align-items: center;
-    text-decoration: none;
 }
 
 .logo-img {
@@ -145,41 +139,47 @@ header a {
     cursor: pointer;
     font-family: 'Courier New', monospace;
     text-decoration: none;
-    display: inline-block;
 }
 
-/* Orders Section */
-.orders-title {
+.nav-btn:hover {
+    background: #523D00;
+}
+
+.orders-title, .form-label, .species-label, .appointment-label, .price-label {
     background: #523D00;
     color: #00FF00;
+    padding: 8px 15px;
+    font-weight: bold;
+}
+
+.orders-title {
     text-align: center;
     padding: 15px;
     margin-bottom: 20px;
     font-size: 20px;
-    font-weight: bold;
 }
 
-/* Form Styling */
+.appointment-label {
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
 .form-container {
     display: grid;
     gap: 15px;
 }
 
-.form-row {
+.form-row, .species-row {
     display: flex;
     align-items: center;
     gap: 15px;
 }
 
-.form-label {
-    background: #523D00;
-    color: #00FF00;
-    padding: 8px 15px;
+.form-label, .species-label {
     min-width: 150px;
-    font-weight: bold;
 }
 
-.form-input {
+.form-input, .species-dropdown, .payment-input {
     flex: 1;
     padding: 8px;
     background: #F1DABF;
@@ -187,7 +187,6 @@ header a {
     font-family: 'Courier New', monospace;
 }
 
-/* Radio Button Styling */
 .radio-group {
     display: flex;
     gap: 0;
@@ -197,9 +196,9 @@ header a {
     background: #523D00;
     color: #00FF00;
     padding: 10px 30px;
-    border: none;
     position: relative;
     cursor: pointer;
+    border: none;
     font-family: 'Courier New', monospace;
 }
 
@@ -214,43 +213,6 @@ header a {
     background: #92817A;
 }
 
-/* Special sections */
-.special-options {
-    display: grid;
-    gap: 6px;
-}
-
-.special-option {
-    background: #523D00;
-    color: #00FF00;
-    padding: 8px 10px;
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.species-row {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.species-label {
-    background: #523D00;
-    color: #00FF00;
-    padding: 8px 15px;
-    min-width: 150px;
-}
-
-.species-dropdown {
-    flex: 1;
-    padding: 8px;
-    background: #F1DABF;
-    border: 2px solid #523D00;
-    font-family: 'Courier New', monospace;
-}
-
 .special-order-row {
     display: flex;
     flex-direction: column;
@@ -262,7 +224,7 @@ header a {
     gap: 10px;
 }
 
-.confirm-btn {
+.confirm-btn, .submit-btn {
     background: #00FF00;
     color: #523D00;
     border: none;
@@ -272,7 +234,14 @@ header a {
     font-weight: bold;
 }
 
-.confirm-btn:hover {
+.submit-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    display: block;
+    margin: 20px auto;
+}
+
+.confirm-btn:hover, .submit-btn:hover {
     background: #92817A;
 }
 
@@ -291,7 +260,6 @@ header a {
     font-size: 12px;
 }
 
-/* Price and Options */
 .price-section {
     margin: 20px 0;
 }
@@ -301,12 +269,6 @@ header a {
     align-items: center;
     gap: 15px;
     margin-bottom: 15px;
-}
-
-.price-label {
-    background: #523D00;
-    color: #00FF00;
-    padding: 8px 15px;
 }
 
 .price-value {
@@ -341,17 +303,8 @@ header a {
     display: block;
 }
 
-/* Appointment Section */
 .appointment-section {
     margin: 20px 0;
-}
-
-.appointment-label {
-    background: #523D00;
-    color: #00FF00;
-    padding: 8px 15px;
-    margin-bottom: 10px;
-    display: inline-block;
 }
 
 .appointment-box {
@@ -361,6 +314,12 @@ header a {
     text-align: center;
     color: #523D00;
     margin-bottom: 15px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.appointment-box:hover {
+    background: #92817A;
 }
 
 .payment-grid {
@@ -370,38 +329,12 @@ header a {
     margin-bottom: 20px;
 }
 
-.payment-input {
-    padding: 8px;
-    background: #F1DABF;
-    border: 2px solid #523D00;
-    font-family: 'Courier New', monospace;
-}
-
-.submit-btn {
-    background: #00FF00;
-    color: #523D00;
-    border: none;
-    padding: 15px 30px;
-    font-size: 16px;
-    font-weight: bold;
-    cursor: pointer;
-    display: block;
-    margin: 20px auto;
-    font-family: 'Courier New', monospace;
-}
-
-.submit-btn:hover {
-    background: #92817A;
-}
-
 .green-text {
     color: #00FF00;
     font-size: 12px;
     margin: 10px 0;
     line-height: 1.4;
 }
-
-/* calendar stuff */
 
 .calendar-modal {
     display: none;
@@ -499,12 +432,7 @@ header a {
     border-color: #523D00;
 }
 
-.calendar-day.other-month {
-    color: #999;
-    background: #F0F0F0;
-    cursor: not-allowed;
-}
-
+.calendar-day.other-month,
 .calendar-day.past {
     color: #999;
     background: #F0F0F0;
@@ -538,13 +466,4 @@ header a {
 
 .calendar-btn:hover {
     opacity: 0.9;
-}
-
-.appointment-box {
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.appointment-box:hover {
-    background: #92817A;
 }
