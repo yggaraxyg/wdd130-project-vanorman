@@ -1,0 +1,234 @@
+body {
+    padding: 0px;
+    margin: 0px;
+    background-color: #F1DABF;
+}
+
+header {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    align-items: center;
+    background-color: #523d00;
+    width: 80%;
+    height: 90px;
+    margin: 0 auto;
+}
+
+.links {
+    justify-self: right;
+}
+
+main {
+    margin: 0 auto;
+    width: 80%;
+}
+
+#hero {
+    width: 100%;
+}
+
+.info-paragraph {
+    color: #00FF00;
+    background-color: #92817A;
+    font-size: 1.3em;
+    margin: 0px;
+    text-align: center;
+}
+
+.bottom-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    background-color: #F1DABF;
+    margin-top: 30px;
+    max-width: 100%;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #00FF00;
+}
+
+.bottom-grid-div {
+    background-color: #523d00;
+    padding-top: 25px;
+    padding-right: 25px;
+    padding-left: 25px;
+    padding-bottom: 15px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 90px;
+}
+
+.home-sub-images {
+    background-color: white;
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+}
+
+.home-sub-images img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.home-button h3 {
+    background-color: #92817A;
+    width: 150px;
+    margin: 0 auto;
+    border-radius: 5px;
+    font-size: 1.3em;
+}
+
+.home-button h3:hover {
+    background-color: #F1DABF;
+}
+
+.home-button a {
+    text-decoration: none;
+    color: #00FF00;
+}
+
+header a {
+    text-decoration: none;
+    color: #00FF00;
+    font-size: 1.3em;
+    background-color: #92817A;
+    padding: 15px 40px;
+    margin-right: 35px;
+}
+
+header a:hover {
+    background-color: #F1DABF;
+}
+
+h1, h2, h3 {
+    font-family: "Papyrus", "Courier Prime", "Times New Roman", serif;
+    letter-spacing: 0.08em;
+}
+
+.page-wrapper {
+    width: 80%;
+    margin: 0 auto;
+    background-color: #92817A;
+    min-height: 100vh;
+    padding-bottom: 40px;
+}
+
+.page-wrapper header,
+.page-wrapper main,
+.page-wrapper footer {
+    width: 100%;
+    margin: 0;
+}
+
+.ratalog-header {
+    margin: 20px 70px;
+    text-align: center;
+    background-color: #523d00;
+    color: #00FF00;
+    border: 3px solid #523d00;
+    padding: 8px 10px;
+}
+
+.ratalog-header h1 {
+    margin: 0;
+    font-size: 1.1em;
+}
+
+.ratalog-header h2 {
+    margin: 4px 0 0;
+    font-size: 1em;
+    color: #00FF00;
+}
+
+.rat-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    padding: 10px 20px 25px;
+}
+
+.rat-card {
+    background-color: #523d00;
+    border: 3px solid #F1DABF;
+    padding: 6px;
+    width: 50%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.rat-image-wrapper {
+    background-color: #c9dff7;
+    border: 3px solid #523d00;
+    width: 98%;
+    height: 220px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.rat-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rat-info {
+    margin-top: 6px;
+    border: 2px solid #00FF00;
+    color: #00FF00;
+    padding: 4px 6px;
+    text-align: center;
+}
+
+.rat-name {
+    margin: 0 0 2px;
+    font-size: 0.85em;
+}
+
+.rat-price {
+    margin: 0;
+    font-size: 0.75em;
+    white-space: pre-line;
+}
+
+.additional-options-section {
+    background-color: #523d00;
+    margin: 10px 20px 0;
+    padding: 8px 10px 12px;
+    border: 3px solid #F1DABF;
+}
+
+.additional-options-section h2 {
+    margin: 0 0 6px;
+    text-align: center;
+    font-size: 0.95em;
+    color: #00FF00;
+}
+
+.additional-options-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.75em;
+    color: #00FF00;
+}
+
+.additional-options-table th,
+.additional-options-table td {
+    padding: 2px 4px;
+}
+
+.additional-options-table thead th {
+    text-align: left;
+    border-bottom: 2px solid #00FF00;
+}
+
+.site-footer {
+    margin-top: 18px;
+    padding-top: 6px;
+    text-align: center;
+    font-size: 0.75em;
+    color: #00FF00;
+}
