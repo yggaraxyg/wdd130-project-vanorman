@@ -86,6 +86,7 @@ header a {
 }
 
 /* order page junk */
+/* order page junk */
 .orders-page * {
     margin: 0;
     padding: 0;
@@ -465,5 +466,5 @@ header a {
 }
 
 .calendar-btn:hover {
-    opacity: 0.85;
+    opacity: 0.9;
 }
