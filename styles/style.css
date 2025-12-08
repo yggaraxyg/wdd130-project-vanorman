@@ -7,7 +7,7 @@ header {
     display: grid;
     grid-template-columns: 300px 1fr;
     align-items: center;
-    background-color: #523d00;
+    background-color: #523D00;
     width: 80%;
     height: 90px;
     margin: 0 auto;
@@ -41,7 +41,7 @@ main {
     color: #00FF00;
 }
 .bottom-grid-div {
-    background-color: #523d00;
+    background-color: #523D00;
     padding-top: 25px;
     padding-right: 25px;
     padding-left: 25px;
@@ -77,4 +77,468 @@ header a {
     background-color: #92817A;
     padding: 15px 40px;
     margin-right: 35px;
+}
+
+
+/* all this junk is for the order page */
+.orders-page * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.orders-page {
+    font-family: 'Courier New', monospace;
+    background: #F1DABF;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+/* Main Container */
+.main-container {
+    background: #92817A;
+    border: 3px solid #523D00;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header with Logo and Navigation */
+.orders-page .header {
+    background: #523D00;
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    gap: 20px;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo-img {
+    height: 60px;
+    width: auto;
+    object-fit: contain;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 10px;
+}
+
+.nav-btn {
+    background: #92817A;
+    color: #00FF00;
+    border: none;
+    padding: 8px 16px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    text-decoration: none;
+    display: inline-block;
+}
+
+/* Orders Section */
+.orders-title {
+    background: #523D00;
+    color: #00FF00;
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Form Styling */
+.form-container {
+    display: grid;
+    gap: 15px;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.form-label {
+    background: #523D00;
+    color: #00FF00;
+    padding: 8px 15px;
+    min-width: 150px;
+    font-weight: bold;
+}
+
+.form-input {
+    flex: 1;
+    padding: 8px;
+    background: #F1DABF;
+    border: 2px solid #523D00;
+    font-family: 'Courier New', monospace;
+}
+
+/* Radio Button Styling */
+.radio-group {
+    display: flex;
+    gap: 0;
+}
+
+.radio-option {
+    background: #523D00;
+    color: #00FF00;
+    padding: 10px 30px;
+    border: none;
+    position: relative;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+}
+
+.radio-option input[type="radio"] {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.radio-option.selected {
+    background: #92817A;
+}
+
+/* Special sections */
+.special-options {
+    display: grid;
+    gap: 6px;
+}
+
+.special-option {
+    background: #523D00;
+    color: #00FF00;
+    padding: 8px 10px;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.species-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.species-label {
+    background: #523D00;
+    color: #00FF00;
+    padding: 8px 15px;
+    min-width: 150px;
+}
+
+.species-dropdown {
+    flex: 1;
+    padding: 8px;
+    background: #F1DABF;
+    border: 2px solid #523D00;
+    font-family: 'Courier New', monospace;
+}
+
+.special-order-row {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.special-dropdown-row {
+    display: flex;
+    gap: 10px;
+}
+
+.confirm-btn {
+    background: #00FF00;
+    color: #523D00;
+    border: none;
+    padding: 8px 15px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.confirm-btn:hover {
+    background: #92817A;
+}
+
+.applied-specials {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.applied-chip {
+    background: #523D00;
+    color: #00FF00;
+    padding: 5px 10px;
+    border-radius: 3px;
+    font-size: 12px;
+}
+
+/* Price and Options */
+.price-section {
+    margin: 20px 0;
+}
+
+.price-display {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.price-label {
+    background: #523D00;
+    color: #00FF00;
+    padding: 8px 15px;
+}
+
+.price-value {
+    color: #00FF00;
+    font-weight: bold;
+    background: #523D00;
+    padding: 8px 15px;
+}
+
+.options-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.option-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #523D00;
+    color: #00FF00;
+    padding: 10px;
+}
+
+.option-item input[type="radio"] {
+    margin-right: 5px;
+}
+
+.option-small-text {
+    font-size: 10px;
+    display: block;
+}
+
+/* Appointment Section */
+.appointment-section {
+    margin: 20px 0;
+}
+
+.appointment-label {
+    background: #523D00;
+    color: #00FF00;
+    padding: 8px 15px;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.appointment-box {
+    background: #F1DABF;
+    border: 2px solid #523D00;
+    padding: 20px;
+    text-align: center;
+    color: #523D00;
+    margin-bottom: 15px;
+}
+
+.payment-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.payment-input {
+    padding: 8px;
+    background: #F1DABF;
+    border: 2px solid #523D00;
+    font-family: 'Courier New', monospace;
+}
+
+.submit-btn {
+    background: #00FF00;
+    color: #523D00;
+    border: none;
+    padding: 15px 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    display: block;
+    margin: 20px auto;
+    font-family: 'Courier New', monospace;
+}
+
+.submit-btn:hover {
+    background: #92817A;
+}
+
+.green-text {
+    color: #00FF00;
+    font-size: 12px;
+    margin: 10px 0;
+    line-height: 1.4;
+}
+
+/* calendar stuff */
+
+.calendar-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.calendar-container {
+    background: #92817A;
+    border: 3px solid #523D00;
+    border-radius: 10px;
+    padding: 20px;
+    font-family: 'Courier New', monospace;
+}
+
+.calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    background: #523D00;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.calendar-header h3 {
+    color: #00FF00;
+    margin: 0;
+    font-size: 18px;
+}
+
+.calendar-nav {
+    background: #92817A;
+    color: #00FF00;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+}
+
+.calendar-nav:hover {
+    background: #523D00;
+}
+
+.calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-weight: bold;
+    color: #523D00;
+}
+
+.calendar-weekdays div {
+    padding: 8px;
+    background: #F1DABF;
+    border-radius: 3px;
+}
+
+.calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.calendar-day {
+    padding: 10px;
+    text-align: center;
+    background: #F1DABF;
+    border: 2px solid transparent;
+    cursor: pointer;
+    border-radius: 5px;
+    font-weight: bold;
+    color: #523D00;
+}
+
+.calendar-day:hover {
+    background: #92817A;
+    border-color: #523D00;
+}
+
+.calendar-day.selected {
+    background: #00FF00;
+    color: #523D00;
+    border-color: #523D00;
+}
+
+.calendar-day.other-month {
+    color: #999;
+    background: #F0F0F0;
+    cursor: not-allowed;
+}
+
+.calendar-day.past {
+    color: #999;
+    background: #F0F0F0;
+    cursor: not-allowed;
+}
+
+.calendar-actions {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.calendar-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Courier New', monospace;
+    font-weight: bold;
+}
+
+.calendar-btn.cancel {
+    background: #92817A;
+    color: #00FF00;
+}
+
+.calendar-btn.confirm {
+    background: #00FF00;
+    color: #523D00;
+}
+
+.calendar-btn:hover {
+    opacity: 0.9;
+}
+
+.appointment-box {
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.appointment-box:hover {
+    background: #92817A;
 }

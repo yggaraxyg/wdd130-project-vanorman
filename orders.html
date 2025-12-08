@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orders - Van Orman Rat Supply</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body class="orders-page">
+    <div class="main-container">
+        <div class="header">
+            <a href="index.html" class="logo-link">
+                <img src="images/rats-logo.png" alt="Van Orman Rats Logo" class="logo-img">
+            </a>
+            <div class="nav-buttons">
+                <a href="index.html" class="nav-btn">HOME</a>
+                <a href="orders.html" class="nav-btn">ORDERING</a>
+                <a href="ratalog.html" class="nav-btn">CATALOG</a>
+            </div>
+        </div>
+
+        <div class="orders-title">Orders</div>
+
+        <form class="form-container">
+            <div class="form-row">
+                <div class="form-label">Name:</div>
+                <input type="text" class="form-input" placeholder="E.g. John Doe" value="">
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Delivery Address:</div>
+                <input type="text" class="form-input" placeholder="E.g. 12345 Example Rd" value="">
+            </div>
+
+            <div class="form-row">
+                <div class="form-label">Amt of Rats:</div>
+                <input type="text" class="form-input" id="quantity-input" placeholder="E.g. 25" value="">
+            </div>
+
+            <div class="form-row">
+                <div class="radio-group">
+                    <label class="radio-option">
+                        <input type="radio" name="quantity-type" value="by-quantity">
+                        By Quantity
+                    </label>
+                    <label class="radio-option selected">
+                        <input type="radio" name="quantity-type" value="by-pound" checked>
+                        By Pound
+                    </label>
+                </div>
+            </div>
+
+            <div class="species-row">
+                <div class="species-label">Species:</div>
+                <select class="species-dropdown" id="species-select">
+                    <option value="brown-rat" data-pound="5.00" data-per="2.00">Brown Rat - $5.00/lb, $2.00/rat</option>
+                    <option value="black-rat" data-pound="10.00" data-per="1.00">Black Rat - $10.00/lb, $1.00/rat</option>
+                    <option value="fancy-rat" data-pound="7.50" data-per="3.00">Fancy Rat - $7.50/lb, $3.00/rat</option>
+                    <option value="cotton-rat" data-pound="5.00" data-per="1.00">Cotton Rat - $5.00/lb, $1.00/rat</option>
+                    <option value="pack-rat" data-pound="6.00" data-per="3.50">Pack Rat - $6.00/lb, $3.50/rat</option>
+                    <option value="marsh-rice-rat" data-pound="12.00" data-per="0.50">Marsh Rice Rat - $12.00/lb, $0.50/rat</option>
+                    <option value="east-woodrat" data-pound="6.00" data-per="3.50">East Woodrat - $6.00/lb, $3.50/rat</option>
+                    <option value="wistar-rat" data-pound="10.00" data-per="4.00">Wistar Rat - $10.00/lb, $4.00/rat</option>
+                    <option value="sprague-dawley-rat" data-pound="10.00" data-per="4.00">Sprague Dawley Rat - $10.00/lb, $4.00/rat</option>
+                    <option value="wooly-mouse" data-pound="40.00" data-per="8.00">Wooly Mouse - $40.00/lb, $8.00/mouse</option>
+                </select>
+            </div>
+
+            <!-- special orders -->
+            <div class="special-order-row">
+                <div class="form-label">Special Order:</div>
+                <div class="special-dropdown-row">
+                    <select class="form-input" id="special-order-select">
+                        <option value="">Select Special Order</option>
+                        <option value="all-old" data-pound="0.50" data-per="0.20" data-label="All Old">All Old (+$0.50/lb, +$0.20/rat)</option>
+                        <option value="all-pups" data-pound="0.20" data-per="0.05" data-label="All Pups">All Pups (+$0.20/lb, +$0.05/rat)</option>
+                        <option value="all-male" data-pound="0.50" data-per="0.20" data-label="All Male">All Male (+$0.50/lb, +$0.20/rat)</option>
+                        <option value="all-female" data-pound="0.50" data-per="0.20" data-label="All Female">All Female (+$0.50/lb, +$0.20/rat)</option>
+                        <option value="all-farmed" data-pound="0.25" data-per="0.10" data-label="All Farmed">All Farmed (+$0.25/lb, +$0.10/rat)</option>
+                        <option value="all-caught" data-pound="0.25" data-per="0.10" data-label="All Caught">All Caught (+$0.25/lb, +$0.10/rat)</option>
+                        <option value="all-pristine" data-pound="0.50" data-per="0.20" data-label="All Pristine">All Pristine (+$0.50/lb, +$0.20/rat)</option>
+                        <option value="ill-dying" data-pound="-1.00" data-per="-0.25" data-label="Including Ill and Dying">Including Ill and Dying (-$1.00/lb, -$0.25/rat)</option>
+                    </select>
+                    <button type="button" class="confirm-btn" id="add-special-btn">Add</button>
+                </div>
+                <div class="applied-specials" id="applied-specials"></div>
+            </div>
+
+            <div class="green-text" id="description-text"></div>
+
+            <div class="price-section">
+                <div class="price-display">
+                    <div class="price-label">Price:</div>
+                    <div class="price-value" id="calculated-price">$0.00 (Calculated)</div>
+                </div>
+
+                <div class="options-grid">
+                    <div class="option-item">
+                        <input type="radio" name="release" value="release">
+                        <div>Release on site <span class="option-small-text">(Additional required)</span></div>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="release" value="leave" checked>
+                        <div>Leave in cage (+$40)</div>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="technician" value="technician">
+                        <div>Technician (+$50) <span class="option-small-text">(Additional required)</span></div>
+                    </div>
+                    <div class="option-item">
+                        <input type="radio" name="technician" value="own-cage">
+                        <div>Use your own cage</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="appointment-section">
+                <div class="appointment-label">Appointment:</div>
+                <div class="appointment-box" id="appointment-box">
+                    Click to schedule your delivery appointment<br>
+                    <span id="selected-date" style="color: #00FF00; font-weight: bold;">No date selected</span>
+                </div>
+
+                <div class="payment-grid">
+                    <input type="text" class="payment-input" placeholder="Card Number">
+                    <input type="text" class="payment-input" placeholder="Exp Date">
+                    <input type="text" class="payment-input" placeholder="Security Code">
+                    <input type="text" class="payment-input" placeholder="ZIP code">
+                </div>
+            </div>
+
+            <button type="submit" class="submit-btn">Submit Order</button>
+        </form>
+    </div>
+
+    <!-- calendar thingy -->
+    <div id="calendar-modal" class="calendar-modal">
+        <div class="calendar-container">
+            <div class="calendar-header">
+                <button type="button" class="calendar-nav" id="prev-month">&lt;</button>
+                <h3 id="calendar-month-year"></h3>
+                <button type="button" class="calendar-nav" id="next-month">&gt;</button>
+            </div>
+            <div class="calendar-weekdays">
+                <div>Sun</div><div>Mon</div><div>Tue</div><div>Wed</div><div>Thu</div><div>Fri</div><div>Sat</div>
+            </div>
+            <div class="calendar-days" id="calendar-days"></div>
+            <div class="calendar-actions">
+                <button type="button" class="calendar-btn cancel" id="cancel-date">Cancel</button>
+                <button type="button" class="calendar-btn confirm" id="confirm-date">Confirm</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- i used ai to help me with this javascript bc i have no idea what im doing -->
+
+    <script>
+        // Calendar
+        let currentDate = new Date();
+        let selectedDate = null;
+
+        function showCalendar() {
+            document.getElementById('calendar-modal').style.display = 'flex';
+            renderCalendar();
+        }
+
+        function hideCalendar() {
+            document.getElementById('calendar-modal').style.display = 'none';
+        }
+
+        function renderCalendar() {
+            const monthNames = ["January", "February", "March", "April", "May", "June",
+                "July", "August", "September", "October", "November", "December"];
+            
+            document.getElementById('calendar-month-year').textContent = 
+                `${monthNames[currentDate.getMonth()]} ${currentDate.getFullYear()}`;
+
+            const firstDay = new Date(currentDate.getFullYear(), currentDate.getMonth(), 1);
+            const startDate = new Date(firstDay);
+            startDate.setDate(startDate.getDate() - firstDay.getDay());
+
+            const calendarDays = document.getElementById('calendar-days');
+            calendarDays.innerHTML = '';
+
+            const today = new Date();
+            today.setHours(0, 0, 0, 0);
+
+            for (let i = 0; i < 42; i++) {
+                const day = new Date(startDate);
+                day.setDate(startDate.getDate() + i);
+
+                const dayElement = document.createElement('div');
+                dayElement.className = 'calendar-day';
+                dayElement.textContent = day.getDate();
+
+                if (day.getMonth() !== currentDate.getMonth()) {
+                    dayElement.classList.add('other-month');
+                } else if (day < today) {
+                    dayElement.classList.add('past');
+                } else {
+                    dayElement.addEventListener('click', function() {
+                        document.querySelectorAll('.calendar-day.selected').forEach(el => el.classList.remove('selected'));
+                        this.classList.add('selected');
+                        selectedDate = new Date(day);
+                    });
+                }
+
+                calendarDays.appendChild(dayElement);
+            }
+        }
+
+        // Specials handling
+        const appliedSpecials = [];
+
+        function renderAppliedSpecials() {
+            const container = document.getElementById('applied-specials');
+            container.innerHTML = appliedSpecials.map(s => `<span class="applied-chip">${s.label}</span>`).join(' ');
+        }
+
+        function addSpecialFromDropdown() {
+            const sel = document.getElementById('special-order-select');
+            const opt = sel.selectedOptions[0];
+            if (!opt || !opt.value) return;
+
+            const exists = appliedSpecials.some(s => s.value === opt.value);
+            if (exists) return;
+
+            appliedSpecials.push({
+                value: opt.value,
+                label: opt.dataset.label,
+                pound: parseFloat(opt.dataset.pound),
+                per: parseFloat(opt.dataset.per)
+            });
+
+            renderAppliedSpecials();
+            updateSummary();
+            calculatePrice();
+        }
+
+        // Summary
+        function updateSummary() {
+            const speciesSelect = document.getElementById('species-select');
+            const isPerPound = document.querySelector('input[name="quantity-type"][value="by-pound"]')?.checked ?? true;
+            const unitLabel = isPerPound ? 'per pound' : 'per rat';
+
+            const speciesOption = speciesSelect.selectedOptions[0];
+            const speciesLabel = speciesOption.textContent.split(' - ')[0];
+            const speciesUnit = parseFloat(isPerPound ? speciesOption.dataset.pound : speciesOption.dataset.per);
+            const parts = [`${speciesLabel} +$${speciesUnit.toFixed(2)} ${unitLabel}`];
+
+            appliedSpecials.forEach(s => {
+                const val = isPerPound ? s.pound : s.per;
+                parts.push(`${s.label} ${val >= 0 ? '+$' : '-$'}${Math.abs(val).toFixed(2)} ${unitLabel}`);
+            });
+
+            document.getElementById('description-text').innerHTML = parts.join(' • ');
+        }
+
+        // Pricing
+        function calculatePrice() {
+            const quantity = parseFloat(document.getElementById('quantity-input').value) || 0;
+            const isPerPound = document.querySelector('input[name="quantity-type"][value="by-pound"]')?.checked ?? true;
+
+            const species = document.getElementById('species-select').selectedOptions[0];
+            const baseUnit = parseFloat(isPerPound ? species.dataset.pound : species.dataset.per);
+
+            let specialsUnit = 0;
+            appliedSpecials.forEach(s => {
+                specialsUnit += isPerPound ? s.pound : s.per;
+            });
+
+            const deliveryPrice = document.querySelector('input[name="release"][value="leave"]')?.checked ? 40 : 0;
+            const technicianPrice = document.querySelector('input[name="technician"][value="technician"]')?.checked ? 50 : 0;
+
+            const total = quantity * (baseUnit + specialsUnit) + deliveryPrice + technicianPrice;
+            document.getElementById('calculated-price').textContent = `$${total.toFixed(2)} (Calculated)`;
+        }
+
+        // Events
+        document.getElementById('add-special-btn').addEventListener('click', addSpecialFromDropdown);
+
+        document.getElementById('species-select').addEventListener('change', () => { updateSummary(); calculatePrice(); });
+        document.getElementById('quantity-input').addEventListener('input', calculatePrice);
+        document.querySelectorAll('input[name="quantity-type"]').forEach(r => {
+            r.addEventListener('change', () => { updateSummary(); calculatePrice(); });
+        });
+        document.querySelectorAll('input[name="release"], input[name="technician"]').forEach(r => {
+            r.addEventListener('change', calculatePrice);
+        });
+
+        document.querySelectorAll('.radio-option input[type="radio"]').forEach(radio => {
+            radio.addEventListener('change', function() {
+                const name = this.name;
+                document.querySelectorAll(`input[name="${name}"]`).forEach(r => r.closest('.radio-option')?.classList.remove('selected'));
+                this.closest('.radio-option')?.classList.add('selected');
+            });
+        });
+
+        document.querySelectorAll('.nav-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const text = this.textContent;
+                if (text === 'HOME') window.location.href = 'index.html';
+                else if (text === 'CATALOG') window.location.href = 'ratalog.html';
+            });
+        });
+
+        document.querySelector('form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            alert('Order submitted!');
+        });
+
+        document.getElementById('appointment-box').addEventListener('click', showCalendar);
+        document.getElementById('cancel-date').addEventListener('click', hideCalendar);
+        document.getElementById('confirm-date').addEventListener('click', function() {
+            if (selectedDate) {
+                const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
+                document.getElementById('selected-date').textContent = `Selected: ${selectedDate.toLocaleDateString('en-US', options)}`;
+                hideCalendar();
+            }
+        });
+        document.getElementById('prev-month').addEventListener('click', function() {
+            currentDate.setMonth(currentDate.getMonth() - 1); renderCalendar();
+        });
+        document.getElementById('next-month').addEventListener('click', function() {
+            currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar();
+        });
+        document.getElementById('calendar-modal').addEventListener('click', function(e) {
+            if (e.target === this) hideCalendar();
+        });
+
+        // Init
+        renderCalendar();
+        renderAppliedSpecials();
+        updateSummary();
+        calculatePrice();
+    </script>
+</body>
+</html>
