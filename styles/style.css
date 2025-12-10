@@ -22,14 +22,18 @@ main {
 #hero {
     width: 100%;
 }
+strong {
+    color: white;
+}
 .info-paragraph {
     color: #00FF00;
     background-color: #92817A;
     font-size: 1.3em;
-    margin: 0px;
-    text-align: center;
+    margin: -5px 0px 0px;
+    text-align: left;
     padding: 5px;
     border-radius: 3px;
+    line-height: 33px;
 }
 .bottom-grid {
     display: grid;
