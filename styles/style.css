@@ -28,6 +28,8 @@ main {
     font-size: 1.3em;
     margin: 0px;
     text-align: center;
+    padding: 5px;
+    border-radius: 3px;
 }
 .bottom-grid {
     display: grid;
@@ -50,6 +52,7 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 90px;
+    border-radius: 20px;
 }
 .home-sub-images {
     background-color: white;
@@ -84,7 +87,9 @@ header a {
     padding: 15px 40px;
     margin-right: 35px;
 }
-
+header a:hover {
+    background-color: #F1DABF;
+}
 /* order page junk */
 /* order page junk */
 .orders-page * {
