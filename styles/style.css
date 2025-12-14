@@ -307,6 +307,8 @@ header a {
     line-height: 1.4;
 }
 
+/* calendar junk */
+
 .calendar-modal {
     display: none;
     position: fixed;
