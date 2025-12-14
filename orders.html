@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Orders - Van Orman Rat Supply</title>
+    <title>Great Horn Rats | Orders Page</title>
     <link rel="stylesheet" href="styles/style.css">
 </head>
 <body class="orders-page">
-    <div class="main-container">
-        <div class="header">
-            <a href="index.html" class="logo-link">
-                <img src="images/rats-logo.png" alt="Rats Logo Image" class="logo-img">
-            </a>
-            <div class="nav-buttons">
-                <a href="index.html" class="nav-btn">HOME</a>
-                <a href="orders.html" class="nav-btn">ORDERING</a>
-                <a href="ratalog.html" class="nav-btn">CATALOG</a>
-            </div>
+    <header>
+        <img src="images/rats-logo.png" alt="hero-rats" width="93px" height="70px">
+        <div class="links">
+            <a href="index.html">Home</a>
+            <a href="orders.html">Orders</a>
+            <a href="ratalog.html">Ratalog</a>
         </div>
+    </header>
 
+    <main>
         <div class="orders-title">Orders</div>
 
         <form class="form-container">
@@ -33,7 +31,7 @@
             </div>
 
             <div class="form-row">
-                <div class="form-label">Amt of Rats:</div>
+                <div class="form-label">Amount of Rats:</div>
                 <input type="text" class="form-input" id="quantity-input" placeholder="E.g. 25" value="">
             </div>
 
@@ -130,8 +128,11 @@
             </div>
 
             <button type="submit" class="submit-btn">Submit Order</button>
+
+            </div>
         </form>
-    </div>
+    </main>
+    
 
     <!-- calendar thingy -->
     <div id="calendar-modal" class="calendar-modal">
@@ -152,7 +153,7 @@
         </div>
     </div>
 
-    <!-- i used ai to help me with this javascript bc i have no idea what im doing -->
+    <!-- i used ai to help me with this javascript bc i have no idea what im doing and its 2 am -->
 
     <script>
         // Calendar
@@ -208,6 +209,8 @@
                 calendarDays.appendChild(dayElement);
             }
         }
+
+        // like fr this doesnt make any sense to me dawg
 
         // Specials handling
         const appliedSpecials = [];

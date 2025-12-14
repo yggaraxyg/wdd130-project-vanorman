@@ -95,7 +95,6 @@ header a:hover {
     background-color: #F1DABF;
 }
 /* order page junk */
-/* order page junk */
 .orders-page * {
     margin: 0;
     padding: 0;
@@ -103,56 +102,27 @@ header a:hover {
 }
 
 .orders-page {
-    font-family: 'Courier New', monospace;
     background: #F1DABF;
     min-height: 100vh;
 }
 
-.main-container {
-    background: #92817A;
-    border: 3px solid #523D00;
-    max-width: 800px;
+.orders-page header {
+    width: 80%;
     margin: 0 auto;
 }
 
-.orders-page .header {
-    background: #523D00;
-    padding: 10px 15px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 20px;
-    gap: 20px;
+.orders-page header a {
+    font-size: 1.3em;
+    padding: 15px 40px;
+    margin-right: 35px;
 }
 
-.logo-link, .logo-img {
-    display: flex;
-    align-items: center;
-}
-
-.logo-img {
-    height: 60px;
-    width: auto;
-    object-fit: contain;
-}
-
-.nav-buttons {
-    display: flex;
-    gap: 10px;
-}
-
-.nav-btn {
-    background: #92817A;
-    color: #00FF00;
-    border: none;
-    padding: 8px 16px;
-    cursor: pointer;
+.orders-page main {
+    margin: 0 auto;
     font-family: 'Courier New', monospace;
-    text-decoration: none;
-}
-
-.nav-btn:hover {
-    background: #523D00;
+    width: 80%;
+    background: #92817A;
+    padding: 20px;
 }
 
 .orders-title, .form-label, .species-label, .appointment-label, .price-label {
@@ -345,6 +315,8 @@ header a:hover {
     margin: 10px 0;
     line-height: 1.4;
 }
+
+/* calendar junk */
 
 .calendar-modal {
     display: none;
